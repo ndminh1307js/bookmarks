@@ -4,7 +4,9 @@
 
 {% block content %}
     <h1>Login</h1>
-    <p>Please use the following form to login</p>
+    <p>Please use the following form to login. If you don't have account,
+    you can create a new account <a href="{% url "register" %}">here</a>
+    </p>
     <form method="post">
         {{ form.as_p }}
         {% csrf_token %}
